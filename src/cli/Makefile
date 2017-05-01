@@ -13,7 +13,8 @@ OBJS =	bufdump.o 			\
 	cli_graph_tuple.o		\
 	cli_graph_update_tuples.o	\
 	lex.o				\
-	main.o
+	main.o              \
+	cli_graph_scc.o
 
 LIBS = -ldb
 TGT = db

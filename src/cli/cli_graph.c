@@ -10,7 +10,8 @@ void cli_graph_new(char *cmdline, int *pos);
 void cli_graph_edge(char *cmdline, int *pos);
 void cli_graph_schema(char *cmdline, int *pos);
 void cli_graph_tuple(char *cmdline, int *pos);
-
+// scc function print the connected component
+void cli_graph_scc();
 static void
 cli_graph_print()
 {
@@ -61,6 +62,9 @@ cli_graph(char *cmdline, int *pos)
 				return;
 			}
 
-	} else if (strlen(s) == 0)
+	} 
+	else if (strcmp(s,"scc")==0)
+		cli_graph_scc();
+	else if (strlen(s) == 0)
 		cli_graph_print();
 }
